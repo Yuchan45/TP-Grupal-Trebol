@@ -1,0 +1,3 @@
+C:\Users\nakat\Desktop\Paso 0\recursos\6-show-capicuas-ordered-unrepeated.py
+C:\Users\nakat\Desktop\Paso 0\recursos\app_matematica.py
+C:\Users\nakat\Desktop\Paso 0\recursos\lib_matematica.py
