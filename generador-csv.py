@@ -10,11 +10,17 @@ comentario_simple = chr(35) # "#"
 
 
 def leer_linea(archivo):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     linea = archivo.readline()
     return linea
 
     
 def encontrar_llave_param(linea):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     aux = linea.split(" ", 1)
     aux2 = aux[1].split("(", 1)
     key = aux2[0]
@@ -51,6 +57,9 @@ def generar_dict_funciones(archivo):
 
 
 def buscar_autor(lista_comentarios):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     autor = 0
     for k in range(len(lista_comentarios)):
         if "autor" in lista_comentarios[k].lower():
@@ -62,6 +71,9 @@ def buscar_autor(lista_comentarios):
 
             
 def buscar_ayuda(lista_comentarios):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     ayuda = 0
     for j in range(len(lista_comentarios)):
         if "ayuda" in lista_comentarios[j].lower():
@@ -73,6 +85,9 @@ def buscar_ayuda(lista_comentarios):
 
 
 def otros_coments(lista_comentarios):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     lista_coments = []
     for h in range(len(lista_comentarios)):
         if not "autor" in lista_comentarios[h].lower() and not "ayuda" in lista_comentarios[h].lower() and lista_comentarios[h].lstrip(" ").rstrip("\n") != comentario_multiple:
@@ -81,6 +96,9 @@ def otros_coments(lista_comentarios):
     return lista_coments
             
 def cargar_dic_coment(key, autor, ayuda, otros):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     dict_comentarios[key] = [autor, ayuda]
     dict_comentarios[key].extend(otros)
 
@@ -126,6 +144,9 @@ def ordenar_dict(diccionario):
 
 
 def escribir_registros(archivo, diccionario):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+    """
     # Recibe un diccionario y lo escribe en un archivo.
     for key in diccionario:
         registros = str(diccionario[key]).rstrip("]").lstrip("[")
@@ -135,6 +156,7 @@ def escribir_registros(archivo, diccionario):
         
 
 programas = open("programas.txt", "r")
+
 linea = leer_linea(programas)
 while linea:
     ruta = linea.rstrip("\n")
