@@ -28,7 +28,7 @@ def encontrar_llave_param(linea):
     return key, param
 
 
-def generar_dict_funciones(archivo):
+def generar_dict_funciones(codigo):
     """[Autor: Yuchan]
        [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
     """
@@ -102,7 +102,7 @@ def cargar_dic_coment(key, autor, ayuda, otros):
     dict_comentarios[key] = [autor, ayuda]
     dict_comentarios[key].extend(otros)
 
-def generar_dict_comentarios(archivo):
+def generar_dict_comentarios(codigo):
     """[Autor: Yuchan]
        [Ayuda: Recibe un archivo abierto y genera un diccionario con solo comentarios, cuyas claves seran los nombres de las funciones.]
     """
@@ -135,6 +135,7 @@ def generar_dict_comentarios(archivo):
     lista_comentarios.clear()
     return dict_comentarios
 
+
 def ordenar_dict(diccionario):
     """[Autor: Yuchan]
        [Ayuda: Recibe un diccionario y lo ordena alfabeticamente por key. Retorna un diccionario. Casteando el "dict" logro que me retorne un diccionario y no una lista de tuplas]
@@ -153,42 +154,44 @@ def escribir_registros(archivo, diccionario):
         linea = key + "," + registros + "\n"
         archivo.write(linea)
         #print("Escribi la linea de la funcion:", key)
-        
+   
 
-programas = open("programas.txt", "r")
-
-linea = leer_linea(programas)
-while linea:
-    ruta = linea.rstrip("\n")
-    codigo = open(ruta, "r")
-    #print(ruta)
-    #print("Diccionario de funciones")
-    dict_funciones = generar_dict_funciones(codigo)
-    dict_funciones_ordenado = ordenar_dict(dict_funciones)
-    ruta_csv_funciones = "csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
-    guardar = open(ruta_csv_funciones, "w")
-    escribir_registros(guardar, dict_funciones_ordenado)
-    guardar.close()
-    #print(dict_funciones_ordenado)
-    
-    #print("--------------------")
-    codigo.seek(0)
-    
-    #print("Diccionario de comentarios")
-    dict_comentarios = generar_dict_comentarios(codigo)
-    dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
-    ruta_csv_comentarios = "csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
-    guardar = open(ruta_csv_comentarios, "w")
-    escribir_registros(guardar, dict_funciones_ordenado)
-    guardar.close()
-    #print(dict_comentarios_ordenado)
-
-    
-    codigo.close()
-    dict_funciones.clear()
-    dict_comentarios.clear()
-
+def main(archivo):
+    programas = open(archivo, "r")
     linea = leer_linea(programas)
+    while linea:
+        ruta = linea.rstrip("\n")
+        codigo = open(ruta, "r")
+        #print(ruta)
+        #print("Diccionario de funciones")
+        dict_funciones = generar_dict_funciones(codigo)
+        dict_funciones_ordenado = ordenar_dict(dict_funciones)
+        ruta_csv_funciones = "csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+        guardar = open(ruta_csv_funciones, "w")
+        escribir_registros(guardar, dict_funciones_ordenado)
+        guardar.close()
+        #print(dict_funciones_ordenado)
+        
+        #print("--------------------")
+        codigo.seek(0)
+        
+        #print("Diccionario de comentarios")
+        dict_comentarios = generar_dict_comentarios(codigo)
+        dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
+        ruta_csv_comentarios = "csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+        guardar = open(ruta_csv_comentarios, "w")
+        escribir_registros(guardar, dict_funciones_ordenado)
+        guardar.close()
+        #print(dict_comentarios_ordenado)   
+        codigo.close()
+        dict_funciones.clear()
+        dict_comentarios.clear()
+
+        linea = leer_linea(programas)
+        
+        
+archivo = "programas.txt"
+main(archivo)
 print("Termine")
 
 
