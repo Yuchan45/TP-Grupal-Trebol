@@ -184,7 +184,7 @@ def main(archivo):
         dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
         ruta_csv_comentarios = "csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
         guardar = open(ruta_csv_comentarios, "w")
-        escribir_registros(guardar, dict_funciones_ordenado)
+        escribir_registros(guardar, dict_comentarios_ordenado)
         guardar.close()
         #print(dict_comentarios_ordenado)   
         codigo.close()
