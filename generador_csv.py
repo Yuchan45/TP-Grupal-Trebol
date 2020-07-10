@@ -1,7 +1,6 @@
 import re
 import os
 import sys
-from modulo_merge import *
 
 palabra_func = "^def (\w+)" # Esto me permite hallar lo que le sigue al def, osea el nombre de una funcion.
 dict_funciones = {}
@@ -170,7 +169,7 @@ def main(archivo):
         #print("Diccionario de funciones")
         dict_funciones = generar_dict_funciones(codigo)
         dict_funciones_ordenado = ordenar_dict(dict_funciones)
-        ruta_csv_funciones = "csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+        ruta_csv_funciones = "./salidas/csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
         guardar = open(ruta_csv_funciones, "w")
         escribir_registros(guardar, dict_funciones_ordenado)
         guardar.close()
@@ -182,7 +181,7 @@ def main(archivo):
         #print("Diccionario de comentarios")
         dict_comentarios = generar_dict_comentarios(codigo)
         dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
-        ruta_csv_comentarios = "csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+        ruta_csv_comentarios = "./salidas/csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
         guardar = open(ruta_csv_comentarios, "w")
         escribir_registros(guardar, dict_comentarios_ordenado)
         guardar.close()
@@ -194,9 +193,6 @@ def main(archivo):
         linea = leer_linea(programas)
         
         
-archivo = "programas.txt"
-main(archivo)
-merge_csv()
-print("Termine")
+
 
 
