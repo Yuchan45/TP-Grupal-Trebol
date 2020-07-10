@@ -1,6 +1,7 @@
 import re
 import os
 import sys
+from modulo_merge import *
 
 palabra_func = "^def (\w+)" # Esto me permite hallar lo que le sigue al def, osea el nombre de una funcion.
 dict_funciones = {}
@@ -157,6 +158,9 @@ def escribir_registros(archivo, diccionario):
    
 
 def main(archivo):
+    """[Autor: Yuchan]
+       [Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]
+    """
     programas = open(archivo, "r")
     linea = leer_linea(programas)
     while linea:
@@ -192,6 +196,7 @@ def main(archivo):
         
 archivo = "programas.txt"
 main(archivo)
+merge_csv()
 print("Termine")
 
 
