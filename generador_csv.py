@@ -7,6 +7,8 @@ dict_funciones = {}
 dict_comentarios = {}
 comentario_multiple = chr(34) + chr(34) + chr(34) # """
 comentario_simple = chr(35) # "#"
+l_fun = []
+l_com = []
 
 
 def leer_linea(archivo):
@@ -156,11 +158,13 @@ def escribir_registros(archivo, diccionario):
         #print("Escribi la linea de la funcion:", key)
    
 
-def main(archivo):
+def main_generador(archivo):
     """[Autor: Yuchan]
        [Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]
     """
     programas = open(archivo, "r")
+    l_fun.clear()
+    l_com.clear()
     linea = leer_linea(programas)
     while linea:
         ruta = linea.rstrip("\n")
@@ -173,6 +177,7 @@ def main(archivo):
         guardar = open(ruta_csv_funciones, "w")
         escribir_registros(guardar, dict_funciones_ordenado)
         guardar.close()
+        l_fun.append(ruta_csv_funciones)
         #print(dict_funciones_ordenado)
         
         #print("--------------------")
@@ -185,7 +190,8 @@ def main(archivo):
         guardar = open(ruta_csv_comentarios, "w")
         escribir_registros(guardar, dict_comentarios_ordenado)
         guardar.close()
-        #print(dict_comentarios_ordenado)   
+        l_com.append(ruta_csv_comentarios)
+        #print(dict_comentarios_ordenado)
         codigo.close()
         dict_funciones.clear()
         dict_comentarios.clear()
