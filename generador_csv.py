@@ -1,14 +1,11 @@
 import re
 import os
-import sys
 
 palabra_func = "^def (\w+)" # Esto me permite hallar lo que le sigue al def, osea el nombre de una funcion.
 dict_funciones = {}
 dict_comentarios = {}
 comentario_multiple = chr(34) + chr(34) + chr(34) # """
 comentario_simple = chr(35) # "#"
-l_fun = []
-l_com = []
 
 
 def leer_linea(archivo):
@@ -162,6 +159,8 @@ def main_generador(archivo):
     """[Autor: Yuchan]
        [Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]
     """
+    l_fun = []
+    l_com = []
     programas = open(archivo, "r")
     l_fun.clear()
     l_com.clear()
@@ -197,7 +196,7 @@ def main_generador(archivo):
         dict_comentarios.clear()
 
         linea = leer_linea(programas)
-        
+    return l_fun, l_com
         
 
 
