@@ -1,6 +1,6 @@
 menu_MCD,'[Autor: Juan Perez]', '[Ayuda: submenu de la opcion mcd]'
 menu_MCM,'[Autor: Juan Perez]', '[Ayuda: submenu de la opcion mcm]'
-menu_elegir,'Sin autor', 'Sin ayuda'
+menu_elegir,'[Autor: Sin autor]', '[Ayuda: Sin ayuda]'
 menu_factorial,'[Autor: Alan Gonzalez]', '[Ayuda: submenu de la opcion factorial]'
 menu_opciones,'[Autor: Alan Gonzalez]', '[Ayuda: Menu de opciones]'
 menu_potencia,'[Autor: Juan Perez]', '[Ayuda: submenu de la opcion Potencia]'

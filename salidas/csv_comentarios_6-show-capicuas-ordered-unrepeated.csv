@@ -1,4 +1,4 @@
 capicuas,'[Autor: Yuchan]', '[Ayuda: Arma una lista con las palabras capicuas]', 'asdas', 'asdasdasdasads'
 delete_repeated,'[Autor: Yuchan]', '[Ayuda: Elimina elementos de la lista repetidos]', 'holas', 'como'
-make_list,'Sin autor', '[Ayuda: Arma una lista]', 'Side comment', 'Holaa'
-ordered_list,'Sin autor', 'Sin ayuda', 'Ordena alfabeticamente', 'asdasd'
+make_list,'[Autor: Sin autor]', '[Ayuda: Arma una lista]', 'Side comment', 'Holaa'
+ordered_list,'[Autor: Sin autor]', '[Ayuda: Sin ayuda]', 'Ordena alfabeticamente', 'asdasd'

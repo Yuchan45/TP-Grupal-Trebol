@@ -29,7 +29,7 @@ def encontrar_llave_param(linea):
 
 def generar_dict_funciones(codigo):
     """[Autor: Yuchan]
-       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
+       [Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
     """
     linea = leer_linea(codigo)
     while linea:
@@ -65,7 +65,7 @@ def buscar_autor(lista_comentarios):
             devolver = lista_comentarios[k].lstrip(" ").rstrip("\n").lstrip(comentario_multiple)
             autor += 1
     if autor < 1:
-        devolver = "Sin autor"
+        devolver = "[Autor: Sin autor]"
     return devolver
 
             
@@ -79,7 +79,7 @@ def buscar_ayuda(lista_comentarios):
             devolver = lista_comentarios[j].lstrip(" ").rstrip("\n")
             ayuda += 1
     if ayuda < 1:
-        devolver = "Sin ayuda"
+        devolver = "[Ayuda: Sin ayuda]"
     return devolver
 
 
@@ -103,7 +103,7 @@ def cargar_dic_coment(key, autor, ayuda, otros):
 
 def generar_dict_comentarios(codigo):
     """[Autor: Yuchan]
-       [Ayuda: Recibe un archivo abierto y genera un diccionario con solo comentarios, cuyas claves seran los nombres de las funciones.]
+       [Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo comentarios, cuyas claves seran los nombres de las funciones.]
     """
     lista_comentarios = []
     linea = leer_linea(codigo)
