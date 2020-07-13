@@ -127,15 +127,18 @@ def main_panel_general_funciones(fuente_unico, comentarios, arch_salida):
     linea = fuente_unico.readline()
     linea_c = comentarios.readline()
     arch_salida.write("FUNCION, PARAMETROS, LINEAS, INVOCACIONES, RETURNS, IF, FOR, WHILE, BREAKS, EXITS, COMENTS, AYUDAS, AUTORES\n")
+    print('{:^55}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format("FUNCION", "Parámetros", "Líneas","Invoacaiones","Returns","If/elif","for","while","break","Exit","Coment","Ayuda", "Autor"))
     while linea: # Ambos archivos tienen la misma cantidad de lineas asi que van a terminar al mismo tiempo.
         l_funcion_actual = linea.split(",")
         funcion_actual = l_funcion_actual[0]
-        
         escribir_panel_general(arch_salida, buscar_funcion_modulo(linea), count_parametros(linea), count_lineas_codigo(linea), dic_invocaciones[funcion_actual], count_palabra(linea, "return"), count_ifs(linea), count_palabra(linea, "for"), count_palabra(linea, "while"), count_palabra(linea, "break"), count_palabra(linea, "exit"), count_comentarios(linea_c), hay_ayuda(linea_c), autor(linea_c))
+        print('{:^55}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format(buscar_funcion_modulo(linea), count_parametros(linea), count_lineas_codigo(linea), dic_invocaciones[funcion_actual],count_palabra(linea, "return"),count_ifs(linea),count_palabra(linea, "for"),count_palabra(linea, "while"),count_palabra(linea, "break"),count_palabra(linea, "exit"),count_comentarios(linea_c),hay_ayuda(linea_c), autor(linea_c)))
         
         
         linea = fuente_unico.readline()
         linea_c = comentarios.readline()
-    print("Genere el panel general.csv")
+    print("-------------------------------------------------------")
+    print("\nGenere el panel general.csv")
+    print("*Los datos han sido registrados en panel_general.csv, ubicado en la carpeta de salidas_modulos")
 
 
