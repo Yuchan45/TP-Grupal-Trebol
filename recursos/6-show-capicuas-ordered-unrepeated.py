@@ -42,7 +42,7 @@ def make_list(txt):
 
 
 
-def ordered_list(lista): # Ordena alfabeticamente
+def ordered_list(lista):
     # Ordena alfabeticamente
     sorted_list = sorted(lista, key=str.lower)#asdasd
     return sorted_list
