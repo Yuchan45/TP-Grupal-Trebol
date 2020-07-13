@@ -47,7 +47,6 @@ def merge(arch_salida, *archs_entrada):
     menor = menor_funcion(lineas)
     
     while menor < MAX_NOM_FUNCION:
-        #Recorre las líneas de los archivos
         for i in range(len(lineas)):
             # En nom_funcion guarda el primer campo y en "*extras" (variable dinamica) se guarda el resto de los campos.
             nom_funcion, *extras = lineas[i]
