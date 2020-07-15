@@ -122,7 +122,6 @@ def escribir_info_desarrollador(arch_salida, total_lineas, dic_participacion):
         arch_salida.write('{:^30}{:^10}'.format("-----------------------------", "----------") + "\n")
         arch_salida.write("\n")
 
-
 def main_informacion_desarrollador(fuente_unico, comentarios, salida):
     """[Autor: Yuchan]
        [Ayuda: Recibe fuente_unico.csv, comentarios.csv y un archivo de salida. Realiza la cadena de ejecucion a fin de cumplir con el enunciado utilizando las diferentes funciones del modulo.]
