@@ -1,4 +1,3 @@
-linea = "capicuas,'(list_words)', '6-show-capicuas-ordered-unrepeated.py', 'len_lista = len(list_words)', 'for i in range(len_lista):', 'palabra = list_words[i].lower()', 'invertida = ""', 'for j in range(len(palabra)-1, -1, -1):', 'invertida += palabra[j]', 'if palabra == invertida:', 'lista_capicuas.append(palabra)', 'return lista_capicuas', ''"
 def buscar_funcion_modulo(linea):
     """[Autor: Yuchan]
        [Ayuda: Recibe una linea de fuente_unico.csv por parametro y devuelve el nombre de la funcion, concatenado con el modulo al que pertenece]
@@ -16,7 +15,6 @@ def gen_lista_linea_codigo(linea):
     linea = linea.rstrip("\n")
     lista = linea.split(".py', ") # La lista[1] va a tener todo lo que le sigue al modulo, osea el codigo.
     lista_linea_codigo = lista[1].split("', ") # lista_linea_codigo va a ser una lista con todo lo que le sigue al campo de modulo. Osea codigo puro
-    #print(lista_linea_codigo)
     return lista_linea_codigo
 
 
@@ -73,6 +71,7 @@ def count_comentarios(linea):
        [Ayuda: Recibe una linea de un archivo de comentarios.csv abierto y devuelve la cantidad de comentarios(EXTRA DESCRIPCION).]
     """
     lista = linea.split("]',")
+    # Las ayudas y autores estan definidos entre " [ ] ".
     if len(lista) > 2:
         comentarios_extra = lista[2].split("',")
         devolver = len(comentarios_extra)
@@ -132,6 +131,7 @@ def count_invocaciones(fuente_unico):
                 else:
                     dic_contador[l_funciones[i]] = 0
             linea = fuente_unico.readline()
+        # En caso de que haya un funcion que no tenga invocaciones (osea que no entro en la condicion anterior), la guardo aca.
         if l_funciones[i] not in dic_contador:
             dic_contador[l_funciones[i]] = 0
             
@@ -146,7 +146,7 @@ def main_panel_general_funciones(fuente_unico, comentarios, arch_salida):
     linea = fuente_unico.readline()
     linea_c = comentarios.readline()
     arch_salida.write("FUNCION, PARAMETROS, LINEAS, INVOCACIONES, RETURNS, IF, FOR, WHILE, BREAKS, EXITS, COMENTS, AYUDAS, AUTORES\n")
-    print('{:^65}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format("FUNCION", "Parámetros", "Líneas","Invocaiones","Returns","If/elif","for","while","break","Exit","Coment","Ayuda", "Autor"))
+    print('{:^65}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format("FUNCION", "Parámetros", "Líneas","Invocaciones","Returns","If/elif","for","while","break","Exit","Coment","Ayuda", "Autor"))
     while linea:
         # Ambos archivos tienen la misma cantidad de lineas asi que van a terminar al mismo tiempo.
         l_funcion_actual = linea.split(",")

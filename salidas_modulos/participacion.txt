@@ -6,7 +6,9 @@ Informe de Desarrollo Por Autor
     generar_dict_funciones        28    
    generar_dict_comentarios       27    
       count_invocaciones          21    
+ escribir_info_desarrollador      16    
  main_panel_general_funciones     16    
+ imprimir_info_desarrollador      15    
    carga_dic_participacion        14    
       main_modulo_merge           12    
             merge                 10    
@@ -15,6 +17,7 @@ Informe de Desarrollo Por Autor
          buscar_ayuda             8     
       count_comentarios           7     
         count_palabra             7     
+      calc_total_lineas           6     
           count_ifs               6     
      count_lineas_codigo          6     
        delete_repeated            6     
@@ -25,9 +28,11 @@ Informe de Desarrollo Por Autor
     encontrar_llave_param         5     
            guardar                5     
          leer_lineas              5     
+main_informacion_desarrollador    5     
         otros_coments             5     
         abrir_archivos            4     
       escribir_registros          4     
+       calc_porcentaje            3     
        count_parametros           3     
         buscar_due√±o             2     
         buscar_funcion            2     
@@ -39,21 +44,7 @@ Informe de Desarrollo Por Autor
         menor_funcion             2     
          ordenar_dict             2     
 
-    36 Funciones - Lineas        286       67%    
------------------------------ ----------
-
-[Autor: Sin autor]
-           FUNCION              LÌneas  
------------------------------ ----------
-         menu_elegir              17    
- escribir_info_desarrollador      16    
- imprimir_info_desarrollador      15    
-      calc_total_lineas           6     
-main_informacion_desarrollador    5     
-       calc_porcentaje            2     
-         ordered_list             2     
-
-     7 Funciones - Lineas         63       15%    
+    41 Funciones - Lineas        331       78%    
 ----------------------------- ----------
 
 [Autor: Juan Perez]
@@ -77,6 +68,15 @@ main_informacion_desarrollador    5
              mcm                  1     
 
      3 Funciones - Lineas         29        7%    
+----------------------------- ----------
+
+[Autor: Sin autor]
+           FUNCION              LÌneas  
+----------------------------- ----------
+         menu_elegir              17    
+         ordered_list             2     
+
+     2 Funciones - Lineas         19        4%    
 ----------------------------- ----------
 
 [Autor: Alan Gonzalez]
