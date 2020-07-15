@@ -15,6 +15,9 @@ def capicuas(list_words):
             lista_capicuas.append(palabra)
     return lista_capicuas
 
+
+
+
 def delete_repeated(lista):
     """
     [Autor: Yuchan]
@@ -22,7 +25,7 @@ def delete_repeated(lista):
     """
     new_list = []
     long = len(lista)
-    for i in range(long):
+    for i in range(long): # Coment prueba
         # holas
         if not lista[i] in new_list:
             new_list.append(lista[i])
@@ -32,14 +35,12 @@ def delete_repeated(lista):
 
 def make_list(txt):
     """
+    [Autor: Yuchan]
     [Ayuda: Arma una lista]
     """
     word_list = txt.split() # Side comment
     # Holaa
     return word_list
- 
-
-
 
 
 def ordered_list(lista):
