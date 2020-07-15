@@ -1,6 +1,7 @@
 from generador_csv import *
 from modulo_merge import *
 from panel_general_funciones import *
+from informacion_desarrollador import *
 
 archivo = "programas.txt"
 lista_funciones, lista_comentarios = main_generador(archivo)
@@ -21,6 +22,17 @@ if opcion == "1":
     comentarios = open("comentarios.csv", "r")
     arch_salida = open("./salidas_modulos/panel_general.csv","w")
     main_panel_general_funciones(fuente_unico, comentarios, arch_salida)
+    fuente_unico.close()
+    comentarios.close()
+    arch_salida.close()
+    
+elif opcion == "5":
+    print("\n")
+    print("---INFORMACION POR DESARROLLADOR--------")
+    fuente_unico = open("fuente_unico.csv", "r")
+    comentarios = open("comentarios.csv", "r")
+    arch_salida = open("./salidas_modulos/participacion.txt", "w")
+    main_informacion_desarrollador(fuente_unico, comentarios, arch_salida)
     fuente_unico.close()
     comentarios.close()
     arch_salida.close()
