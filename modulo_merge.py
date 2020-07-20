@@ -1,7 +1,7 @@
 MAX_NOM_FUNCION = "zzzzzzzzzzzzzzz"
 
 def leer(arch):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo y lee una linea de este]
     """
     linea = arch.readline()
@@ -12,7 +12,7 @@ def leer(arch):
     return devolver
 
 def guardar(arch, nom_funcion, extras):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo abierto en el cual va a escribir (archivo de salida), y escribe en este el nombre de la funcion y el resto de los campos]
     """
     datos_extras = []
@@ -23,7 +23,7 @@ def guardar(arch, nom_funcion, extras):
     arch.write(str(nom_funcion) + "," + extras_formato + "\n")
     
 def leer_lineas(l_arch):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista de archivos y retorna la primer linea que leyo de cada archivo]
     """
     lineas = []
@@ -33,14 +33,14 @@ def leer_lineas(l_arch):
     return lineas
 
 def menor_funcion(lineas):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista con lineas y genera una lista ordenada alfabeticamente. Retorna el menor de la lista.]
     """
     dato_menor = min(lineas)
     return dato_menor[0]
 
 def merge(arch_salida, *archs_entrada):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo de salida "arch_salida" abierto en modo sobreescritura en donde se guardara el merge y "archs_entrada" la cual es una lista de archivos csv ya abiertos en modo lectura.]
     """
     lineas = leer_lineas(archs_entrada)
@@ -61,7 +61,7 @@ def merge(arch_salida, *archs_entrada):
 
 
 def abrir_archivos(lista):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista y abre los archivos dentro de esta. Devuelve las rutas de los archivos en una lista]
     """
     rutas_arch_abiertos = []
@@ -70,14 +70,14 @@ def abrir_archivos(lista):
     return rutas_arch_abiertos
    
 def cerrar_archivos(lista):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista con las rutas de los archivos a cerrar y los cierra]
     """
     for i in range(len(lista)):
         lista[i].close()
 
 def main_modulo_merge(lista_funciones, lista_comentarios):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista con las rutas de los archivos a mergear. Una lista de funciones y una de comentarios. Genera "fuente_unico.csv" y "comentarios.csv"]
     """
     # Hago lo mismo 2 veces

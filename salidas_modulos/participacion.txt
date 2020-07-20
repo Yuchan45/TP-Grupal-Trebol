@@ -1,5 +1,5 @@
 Informe de Desarrollo Por Autor 
-[Autor: Yuchan]
+[Autor: Tomas Yu Nakasone]
            FUNCION              Líneas  
 ----------------------------- ----------
              main                 30    
@@ -13,7 +13,6 @@ Informe de Desarrollo Por Autor
    carga_dic_participacion        14    
       main_modulo_merge           12    
             merge                 10    
-           capicuas               9     
          buscar_autor             8     
          buscar_ayuda             8     
       count_comentarios           7     
@@ -21,7 +20,6 @@ Informe de Desarrollo Por Autor
       calc_total_lineas           6     
           count_ifs               6     
      count_lineas_codigo          6     
-       delete_repeated            6     
     gen_lista_linea_codigo        6     
           hay_ayuda               6     
              leer                 6     
@@ -41,11 +39,10 @@ main_informacion_desarrollador    5
        cerrar_archivos            2     
     escribir_panel_general        2     
           leer_linea              2     
-          make_list               2     
         menor_funcion             2     
          ordenar_dict             2     
 
-    42 Funciones - Lineas        361       79%    
+    39 Funciones - Lineas        344       79%    
 ----------------------------- ----------
 
 [Autor: Juan Perez]
@@ -68,16 +65,15 @@ main_informacion_desarrollador    5
            potencia               8     
              mcm                  1     
 
-     3 Funciones - Lineas         29        6%    
+     3 Funciones - Lineas         29        7%    
 ----------------------------- ----------
 
 [Autor: Sin autor]
            FUNCION              Líneas  
 ----------------------------- ----------
          menu_elegir              17    
-         ordered_list             2     
 
-     2 Funciones - Lineas         19        4%    
+     1 Funciones - Lineas         17        4%    
 ----------------------------- ----------
 
 [Autor: Alan Gonzalez]

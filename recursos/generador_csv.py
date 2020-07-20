@@ -9,7 +9,7 @@ comentario_simple = chr(35)
 
 
 def leer_linea(archivo):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo abierto y devuelve la linea]
     """
     linea = archivo.readline()
@@ -17,7 +17,7 @@ def leer_linea(archivo):
 
     
 def encontrar_llave_param(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea y retorna el nombre de la funcion y parametros]
     """
     aux = linea.split(" ", 1)
@@ -28,7 +28,7 @@ def encontrar_llave_param(linea):
 
 
 def generar_dict_funciones(codigo):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo codigo, cuyas claves seran los nombres de las funciones]
     """
     linea = leer_linea(codigo)
@@ -63,7 +63,7 @@ def generar_dict_funciones(codigo):
 
 
 def buscar_autor(lista_comentarios):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista con comentarios y devuelve el autor en caso de existir]
     """
     autor = 0
@@ -77,7 +77,7 @@ def buscar_autor(lista_comentarios):
 
             
 def buscar_ayuda(lista_comentarios):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista de comentarios y devuleve la ayuda en caso de existir]
     """
     ayuda = 0
@@ -91,7 +91,7 @@ def buscar_ayuda(lista_comentarios):
 
 
 def otros_coments(lista_comentarios):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una lista de comentarios y devuleve los comentarios que no son ni ayuda ni de autor]
     """
     lista_coments = []
@@ -101,14 +101,14 @@ def otros_coments(lista_comentarios):
     return lista_coments
             
 def cargar_dic_coment(key, autor, ayuda, otros):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe el nombre de la funcion, el autor, ayuda y comentarios extra, y los agrega al diccionario de comentarios]
     """
     dict_comentarios[key] = [autor, ayuda]
     dict_comentarios[key].extend(otros)
 
 def generar_dict_comentarios(codigo):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo comentarios, cuyas claves seran los nombres de las funciones.]
     """
     lista_comentarios = []
@@ -142,7 +142,7 @@ def generar_dict_comentarios(codigo):
 
 
 def ordenar_dict(diccionario):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un diccionario y lo ordena alfabeticamente por key. Retorna un diccionario. Casteando el "dict" logro que me retorne un diccionario y no una lista de tuplas]
     """
     dic_ordenado = dict(sorted(diccionario.items()))
@@ -150,7 +150,7 @@ def ordenar_dict(diccionario):
 
 
 def escribir_registros(archivo, diccionario):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un archivo abierto(en donde escribir) y un diccionario. Escribe el dic en el archivo.]
     """
     for key in diccionario:
@@ -160,7 +160,7 @@ def escribir_registros(archivo, diccionario):
    
 
 def main_generador(archivo):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]
     """
     l_fun = []

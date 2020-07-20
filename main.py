@@ -4,7 +4,7 @@ from panel_general_funciones import *
 from informacion_desarrollador import *
 
 def main():
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Genera fuente_unico y comentarios.csv. Y segun la opcion que tomes realizara la linea de ejecucion que corresponda.]
     """
     archivo = "programas.txt"

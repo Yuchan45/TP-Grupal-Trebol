@@ -1,13 +1,13 @@
 #from panel_general_funciones import *
 def buscar_dueño(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de comentarios.csv o fuente_unico.csv abierto y devuelve el primer campo. Osea el autor.]
     """
     lista = linea.split(",")
     return lista[1]
 
 def buscar_funcion(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de comentarios.csv por parametro y devuelve el nombre de la funcion]
     """
     lista = linea.split(",")
@@ -15,7 +15,7 @@ def buscar_funcion(linea):
 
 
 def gen_lista_linea_codigo(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con la seccion de las lineas de codigo como campos.]
     """
     linea = linea.rstrip("\n")
@@ -26,7 +26,7 @@ def gen_lista_linea_codigo(linea):
 
 
 def count_lineas_codigo(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de lineas de codigo que hay en la funcion de esa linea.]
     """
     lista_sin_vacios = []  
@@ -40,8 +40,8 @@ def count_lineas_codigo(linea):
 
 
 def carga_dic_participacion(fuente_unico, comentarios):
-    """[Autor: Yuchan]
-       [Ayuda: Recibe el archivo fuente_unico y comentarios.csv abierto, y devuelve un diccionario anidado de la sigiente forma: {dic = { "'[Autor : Yuchan]'": {'capicuas': 12,'delete_repeated': 7},] }. ]
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe el archivo fuente_unico y comentarios.csv abierto, y devuelve un diccionario anidado de la sigiente forma: {dic = { "'[Autor : Tomas Yu Nakasone]'": {'capicuas': 12,'delete_repeated': 7},] }. ]
     """
     dic_participacion = {}
     linea = fuente_unico.readline()
@@ -61,7 +61,7 @@ def carga_dic_participacion(fuente_unico, comentarios):
     return dic_participacion
         
 def calc_total_lineas(dic_participacion):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe un diccionario anidado con claves(autores) y subclaves(nombres de funcion). Devuelve el acumulador del total de lineas.]
     """
     total_lineas = 0
@@ -73,7 +73,7 @@ def calc_total_lineas(dic_participacion):
     return total_lineas
 
 def calc_porcentaje(total_lineas, lineas_funcion):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe el total de lineas y las lineas por funcion. Devuelve el promedio.]
     """
     porcentaje = 0
@@ -81,7 +81,7 @@ def calc_porcentaje(total_lineas, lineas_funcion):
     return porcentaje
 
 def imprimir_info_desarrollador(total_lineas, dic_participacion):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe el total de lineas en todo el codigo y un diccionario(cargado mediante la funcion carga_dic_part) e imprime los datos del diccionario por pantalla.]
     """
     contador = 0
@@ -102,7 +102,7 @@ def imprimir_info_desarrollador(total_lineas, dic_participacion):
         print("\n")
     
 def escribir_info_desarrollador(arch_salida, total_lineas, dic_participacion):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe el archivo de salida, el total de lineas en todo el codigo y un diccionario(cargado mediante la funcion carga_dic_part). Escribe los datos del diccionario en el archivo de salida.]
     """
     contador = 0
@@ -123,7 +123,7 @@ def escribir_info_desarrollador(arch_salida, total_lineas, dic_participacion):
         arch_salida.write("\n")
 
 def main_informacion_desarrollador(fuente_unico, comentarios, salida):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe fuente_unico.csv, comentarios.csv y un archivo de salida. Realiza la cadena de ejecucion a fin de cumplir con el enunciado utilizando las diferentes funciones del modulo.]
     """
     dic_participacion = carga_dic_participacion(fuente_unico, comentarios)

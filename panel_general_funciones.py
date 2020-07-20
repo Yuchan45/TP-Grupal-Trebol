@@ -1,5 +1,5 @@
 def buscar_funcion_modulo(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de fuente_unico.csv por parametro y devuelve el nombre de la funcion, concatenado con el modulo al que pertenece]
     """
     lista = linea.split(",")
@@ -9,7 +9,7 @@ def buscar_funcion_modulo(linea):
     return devolver.replace(" '", ".")
 
 def gen_lista_linea_codigo(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con la seccion de las lineas de codigo como campos.]
     """
     linea = linea.rstrip("\n")
@@ -19,7 +19,7 @@ def gen_lista_linea_codigo(linea):
 
 
 def count_parametros(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de paramtros que recibe la funcion.]
     """
     lista = linea.split("'")
@@ -27,7 +27,7 @@ def count_parametros(linea):
     return len(devolver)
 
 def count_lineas_codigo(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de lineas de codigo que hay en la funcion de esa linea.]
     """
     lista_sin_vacios = []  
@@ -41,7 +41,7 @@ def count_lineas_codigo(linea):
 
 
 def count_ifs(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de ifs/elifs.]
     """
     contador = 0
@@ -54,7 +54,7 @@ def count_ifs(linea):
 
 
 def count_palabra(linea, palabra_buscada):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y un string el cual es la palabra a buscar en la linea. Devuelve la cantidad de apariciones de la palabra buscada.]
     """
     # Sirve para buscar while, for, return, break y exit
@@ -67,7 +67,7 @@ def count_palabra(linea, palabra_buscada):
     return contador
 
 def count_comentarios(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de comentarios.csv abierto y devuelve la cantidad de comentarios(EXTRA DESCRIPCION).]
     """
     lista = linea.split("]',")
@@ -81,7 +81,7 @@ def count_comentarios(linea):
     
     
 def hay_ayuda(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de comentarios.csv abierto y devuelve SI/NO indicando que hay descripcion de uso de la funcion.]
     """
     lista = linea.split(",")
@@ -92,7 +92,7 @@ def hay_ayuda(linea):
     return devolver
     
 def buscar_dueño(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de comentarios.csv y devuelve el primer campo. Osea el autor.]
     """
     lista = linea.split(",")
@@ -100,7 +100,7 @@ def buscar_dueño(linea):
     
     
 def escribir_panel_general(arch_salida, funcion, parametros, lineas, invocaciones, returns, ifs, fors, whiles, breaks, exits, coments, ayudas, autores):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Escribe y genera un archivo de salida. Recibe en el primer parametro el archivo de salida y en el resto de los parametros, los valores de lo que hay que escribir.]
     """
     escribir = funcion + ", " + str(parametros) + ", " + str(lineas) + ", " + str(invocaciones)+ ", " + str(returns) + ", " + str(ifs) + ", " + str(fors) + ", " + str(whiles) + ", " + str(breaks) + ", " + str(exits) + ", " + str(coments) + ", " + ayudas + ", " + autores + "\n"
@@ -108,7 +108,7 @@ def escribir_panel_general(arch_salida, funcion, parametros, lineas, invocacione
     
     
 def count_invocaciones(fuente_unico):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico.csv abierto y devuelve un diccionario que tiene registrado la cantidad de invocaciones de cada funcion.]
     """
     l_funciones = []
@@ -138,7 +138,7 @@ def count_invocaciones(fuente_unico):
     return dic_contador
 
 def main_panel_general_funciones(fuente_unico, comentarios, arch_salida):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe como entrada fuente_unico.csv, comentarios.csv y un archivo de salida ya abiertos. Imprime por pantalla todos los datos pedidos en el enunciado y los guarda en panel_general.csv.]
     """
     dic_invocaciones = count_invocaciones(fuente_unico)
