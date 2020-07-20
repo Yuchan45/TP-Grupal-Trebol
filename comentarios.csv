@@ -35,6 +35,7 @@ imprimir_info_desarrollador,'[Autor: Yuchan]', '[Ayuda: Recibe el total de linea
 leer,'[Autor: Yuchan]', '[Ayuda: Recibe un archivo y lee una linea de este]'
 leer_linea,'[Autor: Yuchan]', '[Ayuda: Recibe un archivo abierto y devuelve la linea]'
 leer_lineas,'[Autor: Yuchan]', '[Ayuda: Recibe una lista de archivos y retorna la primer linea que leyo de cada archivo]'
+main,'[Autor: Yuchan]', '[Ayuda: Genera fuente_unico y comentarios.csv. Y segun la opcion que tomes realizara la linea de ejecucion que corresponda.]'
 main_generador,'[Autor: Yuchan]', '[Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]'
 main_informacion_desarrollador,'[Autor: Yuchan]', '[Ayuda: Recibe fuente_unico.csv, comentarios.csv y un archivo de salida. Realiza la cadena de ejecucion a fin de cumplir con el enunciado utilizando las diferentes funciones del modulo.]'
 main_modulo_merge,'[Autor: Yuchan]', '[Ayuda: Recibe una lista con las rutas de los archivos a mergear. Una lista de funciones y una de comentarios. Genera "fuente_unico.csv" y "comentarios.csv"]', 'Hago lo mismo 2 veces', '------------- comentarios.csv', 'Abro los archivos de la lista comentarios y obtegno una lista con los paths de los archivos a mergear', 'Le pase una lista como variable dinamica. Le pasa todos lo archivos abiertos que tengo guardado en la lista rutas', 'Cierro los csv que use para mergear', '------------- fuente_unico.csv'

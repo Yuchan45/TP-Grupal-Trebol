@@ -2,6 +2,7 @@ Informe de Desarrollo Por Autor
 [Autor: Yuchan]
            FUNCION              Líneas  
 ----------------------------- ----------
+             main                 30    
         main_generador            29    
     generar_dict_funciones        28    
    generar_dict_comentarios       27    
@@ -44,7 +45,7 @@ main_informacion_desarrollador    5
         menor_funcion             2     
          ordenar_dict             2     
 
-    41 Funciones - Lineas        331       78%    
+    42 Funciones - Lineas        361       79%    
 ----------------------------- ----------
 
 [Autor: Juan Perez]
@@ -67,7 +68,7 @@ main_informacion_desarrollador    5
            potencia               8     
              mcm                  1     
 
-     3 Funciones - Lineas         29        7%    
+     3 Funciones - Lineas         29        6%    
 ----------------------------- ----------
 
 [Autor: Sin autor]
