@@ -8,7 +8,7 @@ def buscar_funcion_modulo(linea):
             devolver = lista[0] + campo.rstrip("'")
     return devolver.replace(" '", ".")
 
-def gen_lista_linea_codigo(linea):
+def crear_lista_codigo(linea):
     """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con la seccion de las lineas de codigo como campos.]
     """
@@ -26,12 +26,12 @@ def count_parametros(linea):
     devolver = lista[1].split(",")
     return len(devolver)
 
-def count_lineas_codigo(linea):
+def cont_lineas_codigo(linea):
     """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de lineas de codigo que hay en la funcion de esa linea.]
     """
     lista_sin_vacios = []  
-    lista_linea_codigo = gen_lista_linea_codigo(linea)
+    lista_linea_codigo = crear_lista_codigo(linea)
     # Elimino los espacios en blanco. Creo una lista vacia y meto los campos no vacios.
     for campo in lista_linea_codigo:
         if campo != "''" and campo != "'":
@@ -45,7 +45,7 @@ def count_ifs(linea):
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de ifs/elifs.]
     """
     contador = 0
-    lista_linea_codigo = gen_lista_linea_codigo(linea)
+    lista_linea_codigo = crear_lista_codigo(linea)
     for campo in lista_linea_codigo:
         # Al poner el espacio en blanco luego del if, me aseguro de que es una sentencia.
         if "if " in campo or "elif " in campo: 
@@ -60,7 +60,7 @@ def count_palabra(linea, palabra_buscada):
     # Sirve para buscar while, for, return, break y exit
     buscar = palabra_buscada + " " # Se le agrega el espacio para asegurarnos de que lo que estamos buscando es una sentencia y no adentro de un print.
     contador = 0
-    lista_linea_codigo = gen_lista_linea_codigo(linea)
+    lista_linea_codigo = crear_lista_codigo(linea)
     for campo in lista_linea_codigo:
         if buscar in campo: 
             contador += 1
@@ -152,8 +152,8 @@ def main_panel_general_funciones(fuente_unico, comentarios, arch_salida):
         # Ambos archivos tienen la misma cantidad de lineas asi que van a terminar al mismo tiempo.
         l_funcion_actual = linea.split(",")
         funcion_actual = l_funcion_actual[0]
-        escribir_panel_general(arch_salida, buscar_funcion_modulo(linea), count_parametros(linea), count_lineas_codigo(linea), dic_invocaciones[funcion_actual], count_palabra(linea, "return"), count_ifs(linea), count_palabra(linea, "for"), count_palabra(linea, "while"), count_palabra(linea, "break"), count_palabra(linea, "exit"), count_comentarios(linea_c), hay_ayuda(linea_c), buscar_dueño(linea_c))
-        print('{:^65}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format(buscar_funcion_modulo(linea), count_parametros(linea), count_lineas_codigo(linea), dic_invocaciones[funcion_actual],count_palabra(linea, "return"),count_ifs(linea),count_palabra(linea, "for"),count_palabra(linea, "while"),count_palabra(linea, "break"),count_palabra(linea, "exit"),count_comentarios(linea_c),hay_ayuda(linea_c), buscar_dueño(linea_c))) 
+        escribir_panel_general(arch_salida, buscar_funcion_modulo(linea), count_parametros(linea), cont_lineas_codigo(linea), dic_invocaciones[funcion_actual], count_palabra(linea, "return"), count_ifs(linea), count_palabra(linea, "for"), count_palabra(linea, "while"), count_palabra(linea, "break"), count_palabra(linea, "exit"), count_comentarios(linea_c), hay_ayuda(linea_c), buscar_dueño(linea_c))
+        print('{:^65}{:^10}{:^10}{:^10}{:^10}{:^10}{:^5}{:^10}{:^10}{:^10}{:^10}{:^10}{:^25}'.format(buscar_funcion_modulo(linea), count_parametros(linea), cont_lineas_codigo(linea), dic_invocaciones[funcion_actual],count_palabra(linea, "return"),count_ifs(linea),count_palabra(linea, "for"),count_palabra(linea, "while"),count_palabra(linea, "break"),count_palabra(linea, "exit"),count_comentarios(linea_c),hay_ayuda(linea_c), buscar_dueño(linea_c))) 
         linea = fuente_unico.readline()
         linea_c = comentarios.readline()
              
