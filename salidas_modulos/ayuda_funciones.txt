@@ -1,0 +1,755 @@
+-----------------------------------------------
+|Funcion|: abrir_archivos(lista)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista y abre los archivos dentro de esta. Devuelve las rutas d
+e los archivos en una lista]'
+
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: buscar_autor(lista_comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista con comentarios y devuelve el autor en caso de existir]'
+
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: buscar_ayuda(lista_comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista de comentarios y devuleve la ayuda en caso de existir]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: buscar_dueño(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de comentarios.csv y devuelve el primer campo. Osea el a
+utor.]'
+
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: buscar_funcion(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de comentarios.csv por parametro y devuelve el nombre de
+ la funcion]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: buscar_funcion_modulo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de fuente_unico.csv por parametro y devuelve el nombre d
+e la funcion, concatenado con el modulo al que pertenece]'
+
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: calc_porcentaje(total_lineas, lineas_funcion)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el total de lineas y las lineas por funcion. Devuelve el promedio.
+]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: calc_total_lineas(dic_participacion)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un diccionario anidado con claves(autores) y subclaves(nombres de 
+funcion). Devuelve el acumulador del total de lineas.
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: carga_dic_participacion(fuente_unico, comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el archivo fuente_unico y comentarios.csv abierto, y devuelve un d
+iccionario anidado de la sigiente forma: {dic = { "\'[Autor : Tomas Yu Nakasone]
+\'": {\'capicuas\': 12,\'delete_repeated\': 7},] }. 
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: cargar_dic_coment(key, autor, ayuda, otros)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el nombre de la funcion, el autor, ayuda y comentarios extra, y lo
+s agrega al diccionario de comentarios]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: caso_hashtag(fuente_unico, comentarios, funcion)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe fuente_unico, comentarios y la funcion buscada por parametro. Impr
+ime los datos solicitados por el enunciado.]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: caso_hashtag_todo(fuente_unico, comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe los archivos, fuente_unico y comentarios. Luego imprime todo lo re
+lativo a la funcion, para cada una de las funciones mostradas por pantalla]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: caso_imprimir_todo(fuente_unico, comentarios, arch_salida)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe fuente_unico, comentarios y un archivo de salida previamente abier
+tos. Escribe en el archivo de salida los datos solicitados por el enunciado haci
+endo uso de la funcion "escribir-salida"]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: caso_pregunta(fuente_unico, comentarios, funcion)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe los archivos, fuente_unico y comentarios y la funcion elegida por 
+el usuario, luego imprime el autor, la ayuda, los parametros y el modulo de la f
+uncion buscada]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: caso_pregunta_todo(fuente_unico, comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Sin ayuda o descripcion.
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: cerrar_archivos(lista)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista con las rutas de los archivos a cerrar y los cierra]'
+
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: conseguir_funcion(palabra)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe una palabra y devuelve la misma palabra separada por el caracter e
+special
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: cont_lineas_codigo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cant
+idad de lineas de codigo que hay en la funcion de esa linea.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_comentarios(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Sin ayuda o descripcion.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_ifs(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cant
+idad de ifs/elifs.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_invocaciones(fuente_unico)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico.csv abierto y devuelve un 
+diccionario que tiene registrado la cantidad de invocaciones de cada funcion.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_lineas_codigo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cant
+idad de lineas de codigo que hay en la funcion de esa linea.
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_palabra(linea, palabra_buscada)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y un string el cua
+l es la palabra a buscar en la linea. Devuelve la cantidad de apariciones de la 
+palabra buscada.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: count_parametros(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cant
+idad de paramtros que recibe la funcion.]'
+
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: crear_lista_codigo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lis
+ta con la seccion de las lineas de codigo como campos.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: dueño(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de comentarios.csv o fuente_unico.csv abie
+rto y devuelve el primer campo. Osea el autor.]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: enc_extra_descripcion(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Sin ayuda o descripcion.
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_autor(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe una linea de un archivo. La convierte a una lista separada por com
+as y devuelve el segundo elemento que corresponde al autor de la funcion]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_descripcion(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe una linea de un archivo. La convierte a una lista separada por com
+as y devuelve la ayuda de la funcion]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_funcion(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe una linea de un archivo. La convierte a una lista separada por com
+as y devuelve el primer elemento que corresponde al nombre de la funcion]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_llave_param(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea y retorna el nombre de la funcion y parametros]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_modulo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe una linea de un archivo. La convierte a una lista separada por com
+as y devuelve el modulo de la funcion]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: encontrar_param(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: recibe una linea de un archivo. La convierte a una lista separada por com
+as y devuelve el segundo elemento que corresponde a los parametros de la funcion
+]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: escribir_arch_salida(salida, funcion, parametros, autor, descripcion,
+ modulo)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe por parametros los datos a escribir en el archivo de salida. Devue
+lve un txt ubicado en salidas_modulos con todos los datos.
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: escribir_info_desarrollador(arch_salida, total_lineas, dic_participac
+ion)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el archivo de salida, el total de lineas en todo el codigo y un di
+ccionario(cargado mediante la funcion carga_dic_part). Escribe los datos del dic
+cionario en el archivo de salida.]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: escribir_panel_general(arch_salida, funcion, parametros, lineas, invo
+caciones, returns, ifs, fors, whiles, breaks, exits, coments, ayudas, autores)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Escribe y genera un archivo de salida. Recibe en el primer parametro el a
+rchivo de salida y en el resto de los parametros, los valores de lo que hay que 
+escribir.]'
+
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: escribir_registros(archivo, diccionario)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo abierto(en donde escribir) y un diccionario. Escribe el
+ dic en el archivo.]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: gen_lista_linea_codigo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lis
+ta con la seccion de las lineas de codigo como campos.
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: generar_dict_comentarios(codigo)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo com
+entarios, cuyas claves seran los nombres de las funciones.
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: generar_dict_funciones(codigo)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo abierto con codigo y genera un diccionario con solo cod
+igo, cuyas claves seran los nombres de las funciones
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: guardar(arch, nom_funcion, extras)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo abierto en el cual va a escribir (archivo de salida), y
+ escribe en este el nombre de la funcion y el resto de los campos
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: hay_ayuda(linea)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una linea de un archivo de comentarios.csv abierto y devuelve SI/N
+O indicando que hay descripcion de uso de la funcion.]'
+
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: imprimir_info_desarrollador(total_lineas, dic_participacion)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el total de lineas en todo el codigo y un diccionario(cargado medi
+ante la funcion carga_dic_part) e imprime los datos del diccionario por pantalla
+.]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: leer(arch)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo y lee una linea de este]'
+
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: leer_linea(archivo)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo abierto y devuelve la linea]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: leer_lineas(l_arch)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista de archivos y retorna la primer linea que leyo de cada a
+rchivo]'
+
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: lista_de_funciones(fuente_unico)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe una linea de fuente_unico.csv por parametro y devuelve una lista q
+ue contiene los nombres de las funciones]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: lista_lineas_de_codigo(linea)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe una linea de fuente_unico y abierta. Y devuelve una lista con las 
+lineas de CODIGO (Sin espacios en blanco)
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main()
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Genera fuente_unico y comentarios.csv. Y segun la opcion que tomes realiz
+ara la linea de ejecucion que corresponda.]'
+
+Funcion utilizada en el modulo:  'main.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main_consulta_funciones(fuente_unico, comentarios, arch_salida, lista
+_funciones)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: Recibe por parametros fuente_unico, camentarios, el archivo de salida, to
+dos previamente abiertos y una lista con las funciones que hay. Pregunta que es 
+lo que es usuario desea realizar y dependiendo de lo que eliga, ejecuta la funci
+on correspondiente.
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main_generador(archivo)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv c
+omentario y un csv funciones por cada archivo.]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main_informacion_desarrollador(fuente_unico, comentarios, salida)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe fuente_unico.csv, comentarios.csv y un archivo de salida. Realiza 
+la cadena de ejecucion a fin de cumplir con el enunciado utilizando las diferent
+es funciones del modulo.]'
+
+Funcion utilizada en el modulo:  'informacion_desarrollador.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main_modulo_merge(lista_funciones, lista_comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista con las rutas de los archivos a mergear. Una lista de fu
+nciones y una de comentarios. Genera "fuente_unico.csv" y "comentarios.csv"
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: main_panel_general_funciones(fuente_unico, comentarios, arch_salida)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe como entrada fuente_unico.csv, comentarios.csv y un archivo de sal
+ida ya abiertos. Imprime por pantalla todos los datos pedidos en el enunciado y 
+los guarda en panel_general.csv.
+Funcion utilizada en el modulo:  'panel_general_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: menor_funcion(lineas)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista con lineas y genera una lista ordenada alfabeticamente. 
+Retorna el menor de la lista.]'
+
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: merge(arch_salida, *archs_entrada)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un archivo de salida "arch_salida" abierto en modo sobreescritura 
+en donde se guardara el merge y "archs_entrada" la cual es una lista de archivos
+ csv ya abiertos en modo lectura.
+Funcion utilizada en el modulo:  'modulo_merge.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: mostrar_cuadro(lista_funciones)
+
+|INFORMACION|:
+---------------
+Autor: Carlos Medina
+Ayuda: A esta funcion le llega por parametro una lista con los nombres de todas 
+las funciones', 'e imprime estos nombres con un formato (5 columnas, x filas)]'
+
+Funcion utilizada en el modulo:  'consulta_funciones.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: ordenar_dict(diccionario)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe un diccionario y lo ordena alfabeticamente por key. Retorna un dic
+cionario. Casteando el "dict" logro que me retorne un diccionario y no una lista
+ de tuplas]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+
+-----------------------------------------------
+|Funcion|: otros_coments(lista_comentarios)
+
+|INFORMACION|:
+---------------
+Autor: Tomas Yu Nakasone
+Ayuda: Recibe una lista de comentarios y devuleve los comentarios que no son ni 
+ayuda ni de autor]'
+
+Funcion utilizada en el modulo:  'generador_csv.py'
+
+-----------------------------------------------
+

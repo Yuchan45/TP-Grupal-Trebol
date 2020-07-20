@@ -2,6 +2,7 @@ from generador_csv import *
 from modulo_merge import *
 from panel_general_funciones import *
 from informacion_desarrollador import *
+from consulta_funciones import *
 
 def main():
     """[Autor: Tomas Yu Nakasone]
@@ -29,7 +30,20 @@ def main():
         fuente_unico.close()
         comentarios.close()
         arch_salida.close()
-        
+    
+    elif opcion == "2":
+        print("\n")
+        print("---CONSULTA DE FUNCIONES--------")
+        comentarios = open("comentarios.csv", "r")
+        fuente_unico = open("fuente_unico.csv", "r")
+        salida = open("./salidas_modulos/ayuda_funciones.txt","w")
+        lista_funciones = lista_de_funciones(fuente_unico)
+        mostrar_cuadro(lista_funciones)
+        main_consulta_funciones(fuente_unico, comentarios, salida, lista_funciones)
+        comentarios.close()
+        fuente_unico.close()
+        salida.close()
+
     elif opcion == "5":
         print("\n")
         print("---INFORMACION POR DESARROLLADOR--------")
