@@ -18,8 +18,10 @@ Informe de Desarrollo Por Autor
       count_comentarios           7     
         count_palabra             7     
       calc_total_lineas           6     
+      cont_lineas_codigo          6     
           count_ifs               6     
      count_lineas_codigo          6     
+      crear_lista_codigo          6     
     gen_lista_linea_codigo        6     
           hay_ayuda               6     
              leer                 6     
@@ -37,52 +39,12 @@ main_informacion_desarrollador    5
         buscar_funcion            2     
       cargar_dic_coment           2     
        cerrar_archivos            2     
+            due√±o                2     
     escribir_panel_general        2     
           leer_linea              2     
         menor_funcion             2     
          ordenar_dict             2     
 
-    39 Funciones - Lineas        344       79%    
------------------------------ ----------
-
-[Autor: Juan Perez]
-           FUNCION              LÌneas  
------------------------------ ----------
-           es_primo               10    
-       solicitar_valor            5     
-          factorial               4     
-           menu_MCD               4     
-           menu_MCM               4     
-        menu_potencia             4     
-
-     6 Funciones - Lineas         31        7%    
------------------------------ ----------
-
-[Autor: Ana Garcia]
-           FUNCION              LÌneas  
------------------------------ ----------
-             mcd                  20    
-           potencia               8     
-             mcm                  1     
-
-     3 Funciones - Lineas         29        7%    
------------------------------ ----------
-
-[Autor: Sin autor]
-           FUNCION              LÌneas  
------------------------------ ----------
-         menu_elegir              17    
-
-     1 Funciones - Lineas         17        4%    
------------------------------ ----------
-
-[Autor: Alan Gonzalez]
-           FUNCION              LÌneas  
------------------------------ ----------
-        menu_opciones             10    
-        menu_factorial            3     
-          menu_primo              3     
-
-     3 Funciones - Lineas         16        4%    
+    42 Funciones - Lineas        358       100%   
 ----------------------------- ----------
 

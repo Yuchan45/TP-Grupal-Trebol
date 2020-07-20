@@ -1,5 +1,5 @@
 #from panel_general_funciones import *
-def buscar_dueño(linea):
+def dueño(linea):
     """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de comentarios.csv o fuente_unico.csv abierto y devuelve el primer campo. Osea el autor.]
     """
@@ -48,7 +48,7 @@ def carga_dic_participacion(fuente_unico, comentarios):
     linea_c = comentarios.readline()
     while linea:
         # Ambos archivos tienen la misma cantidad de lineas asi que van a terminar al mismo tiempo.
-        au = buscar_dueño(linea_c).lstrip("'").rstrip("'")
+        au = dueño(linea_c).lstrip("'").rstrip("'")
         funcion = buscar_funcion(linea)
         cant_lineas = count_lineas_codigo(linea)
         #print(au, funcion, cant_lineas)
