@@ -46,8 +46,6 @@ def main():
         salida.close()
 
     elif opcion == "3":
-        print("\n")
-        print("-------ANALIZADOR DE REUTILIZACION DE CODIGO--------\n")
         fuente_unico = open("fuente_unico.csv", "r")
         salida = open("./salidas_modulos/analizador.txt","w")
         main_analizador(fuente_unico, salida)

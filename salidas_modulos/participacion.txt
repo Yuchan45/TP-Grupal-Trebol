@@ -1,0 +1,99 @@
+Informe de Desarrollo Por Autor 
+[Autor: Tomas Yu Nakasone]
+           FUNCION              LÌneas  
+----------------------------- ----------
+             main                 48    
+        main_generador            29    
+    generar_dict_funciones        28    
+   generar_dict_comentarios       27    
+      count_invocaciones          21    
+ escribir_info_desarrollador      16    
+ main_panel_general_funciones     16    
+ imprimir_info_desarrollador      15    
+   carga_dic_participacion        14    
+      main_modulo_merge           12    
+     gen_dic_invoc_count          11    
+            merge                 10    
+         buscar_autor             8     
+         buscar_ayuda             8     
+        cargar_matriz             8     
+      count_comentarios           7     
+        count_palabra             7     
+      calc_total_lineas           6     
+      cont_lineas_codigo          6     
+          count_ifs               6     
+     count_lineas_codigo          6     
+      crear_lista_codigo          6     
+    gen_lista_linea_codigo        6     
+          hay_ayuda               6     
+             leer                 6     
+    buscar_funcion_modulo         5     
+    encontrar_llave_param         5     
+           guardar                5     
+         leer_lineas              5     
+main_informacion_desarrollador    5     
+        otros_coments             5     
+        abrir_archivos            4     
+      escribir_registros          4     
+       calc_porcentaje            3     
+       count_parametros           3     
+         crear_matriz             3     
+        buscar_due√±o             2     
+        buscar_funcion            2     
+      cargar_dic_coment           2     
+       cerrar_archivos            2     
+            due√±o                2     
+    escribir_panel_general        2     
+          leer_linea              2     
+        menor_funcion             2     
+         ordenar_dict             2     
+
+    45 Funciones - Lineas        398       58%    
+----------------------------- ----------
+
+[Autor: Fabiola Siles]
+           FUNCION              LÌneas  
+----------------------------- ----------
+        gen_dic_inv_x             11    
+       main_analizador            10    
+    carga_lista_funciones         8     
+      imprimir_cabecera           8     
+      escribir_cabecera           7     
+       imprimir_lineas            7     
+       escribir_cuerpo            6     
+       gen_ultima_fila            6     
+      lista_invoc_count           6     
+    lista_invocaciones_id         6     
+     escribir_analizador          4     
+      gen_dic_funcion_id          4     
+     escribir_ultima_fila         3     
+        imprimir_todo             3     
+     imprimir_ultima_fila         3     
+
+    15 Funciones - Lineas         92       13%    
+----------------------------- ----------
+
+[Autor: Carlos Medina]
+           FUNCION              LÌneas  
+----------------------------- ----------
+   main_consulta_funciones        27    
+         caso_hashtag             24    
+      caso_hashtag_todo           22    
+     escribir_arch_salida         22    
+        caso_pregunta             16    
+      caso_imprimir_todo          14    
+      caso_pregunta_todo          14    
+    lista_lineas_de_codigo        10    
+      conseguir_funcion           9     
+    enc_extra_descripcion         8     
+        mostrar_cuadro            8     
+    encontrar_descripcion         7     
+      lista_de_funciones          7     
+       encontrar_modulo           5     
+       encontrar_param            3     
+       encontrar_autor            2     
+      encontrar_funcion           2     
+
+    17 Funciones - Lineas        200       29%    
+----------------------------- ----------
+

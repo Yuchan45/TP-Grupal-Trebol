@@ -1,3 +1,7 @@
-C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\6-show-capicuas-ordered-unrepeated.py
-C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\app_matematica.py
-C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\lib_matematica.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\generador_csv.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\panel_general_funciones.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\modulo_merge.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\informacion_desarrollador.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\main.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\consulta_funciones.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\analizador_reutilizacion_codigo.py
