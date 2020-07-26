@@ -4,3 +4,4 @@ C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\modulo_merge.py
 C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\informacion_desarrollador.py
 C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\main.py
 C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\consulta_funciones.py
+C:\Users\nakat\Desktop\TP-Grupal-Trebol\recursos\analizador_reutilizacion_codigo.py

@@ -3,6 +3,7 @@ from modulo_merge import *
 from panel_general_funciones import *
 from informacion_desarrollador import *
 from consulta_funciones import *
+from analizador_reutilizacion_codigo import *
 
 def main():
     """[Autor: Tomas Yu Nakasone]
@@ -43,6 +44,16 @@ def main():
         comentarios.close()
         fuente_unico.close()
         salida.close()
+
+    elif opcion == "3":
+        print("\n")
+        print("-------ANALIZADOR DE REUTILIZACION DE CODIGO--------\n")
+        fuente_unico = open("fuente_unico.csv", "r")
+        salida = open("./salidas_modulos/analizador.txt","w")
+        main_analizador(fuente_unico, salida)
+        fuente_unico.close()
+        salida.close()
+
 
     elif opcion == "5":
         print("\n")
