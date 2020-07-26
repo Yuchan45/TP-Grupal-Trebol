@@ -12,31 +12,21 @@ Informe de Desarrollo Por Autor
  imprimir_info_desarrollador      15    
    carga_dic_participacion        14    
       main_modulo_merge           12    
-        gen_dic_inv_x             11    
      gen_dic_invoc_count          11    
-       main_analizador            10    
             merge                 10    
          buscar_autor             8     
          buscar_ayuda             8     
-    carga_lista_funciones         8     
         cargar_matriz             8     
-      imprimir_cabecera           8     
       count_comentarios           7     
         count_palabra             7     
-      escribir_cabecera           7     
-       imprimir_lineas            7     
       calc_total_lineas           6     
       cont_lineas_codigo          6     
           count_ifs               6     
      count_lineas_codigo          6     
       crear_lista_codigo          6     
-       escribir_cuerpo            6     
     gen_lista_linea_codigo        6     
-       gen_ultima_fila            6     
           hay_ayuda               6     
              leer                 6     
-      lista_invoc_count           6     
-    lista_invocaciones_id         6     
     buscar_funcion_modulo         5     
     encontrar_llave_param         5     
            guardar                5     
@@ -44,15 +34,10 @@ Informe de Desarrollo Por Autor
 main_informacion_desarrollador    5     
         otros_coments             5     
         abrir_archivos            4     
-     escribir_analizador          4     
       escribir_registros          4     
-      gen_dic_funcion_id          4     
        calc_porcentaje            3     
        count_parametros           3     
          crear_matriz             3     
-     escribir_ultima_fila         3     
-        imprimir_todo             3     
-     imprimir_ultima_fila         3     
         buscar_due√±o             2     
         buscar_funcion            2     
       cargar_dic_coment           2     
@@ -63,7 +48,29 @@ main_informacion_desarrollador    5
         menor_funcion             2     
          ordenar_dict             2     
 
-    60 Funciones - Lineas        490       71%    
+    45 Funciones - Lineas        398       58%    
+----------------------------- ----------
+
+[Autor: Fabiola Siles]
+           FUNCION              LÌneas  
+----------------------------- ----------
+        gen_dic_inv_x             11    
+       main_analizador            10    
+    carga_lista_funciones         8     
+      imprimir_cabecera           8     
+      escribir_cabecera           7     
+       imprimir_lineas            7     
+       escribir_cuerpo            6     
+       gen_ultima_fila            6     
+      lista_invoc_count           6     
+    lista_invocaciones_id         6     
+     escribir_analizador          4     
+      gen_dic_funcion_id          4     
+     escribir_ultima_fila         3     
+        imprimir_todo             3     
+     imprimir_ultima_fila         3     
+
+    15 Funciones - Lineas         92       13%    
 ----------------------------- ----------
 
 [Autor: Carlos Medina]

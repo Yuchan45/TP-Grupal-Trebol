@@ -1,5 +1,5 @@
 def lista_invocaciones_id(linea, lista_funciones, dic_funcion_id):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe una linea, una lista con las funciones q pueden aparecer y el diccionario_id_funcion. Te arma una lista con los ID de las funciones q aparecen en la linea. Devuelve dicha lista.]
     """
     lista_agregar = []
@@ -11,7 +11,7 @@ def lista_invocaciones_id(linea, lista_funciones, dic_funcion_id):
 
 
 def carga_lista_funciones(fuente_unico):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con las funciones que hay en ella.]
     """
     lista_funciones = []
@@ -25,7 +25,7 @@ def carga_lista_funciones(fuente_unico):
 
 
 def gen_dic_funcion_id(lista_funciones):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe la lista de funciones y la hace diccionario, asignandole como key la funcion/nombre y de valor su orden (id).]
     """
     dic_funcion_id = {}
@@ -35,7 +35,7 @@ def gen_dic_funcion_id(lista_funciones):
 
 
 def gen_dic_inv_x(fuente_unico, lista_funciones, dic_funcion_id):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y una lista con todas las funciones que hay. Devuelve un diccionario con clave: nombre de la funcion y de valor una lista con los ID de las funciones a las que llama (PUEDE HABER IDS REPETIDAS).]
     """
     dic_invocaciones = {}
@@ -55,7 +55,7 @@ def gen_dic_inv_x(fuente_unico, lista_funciones, dic_funcion_id):
 
 
 def lista_invoc_count(dic_inv_x, funcion):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recorro el dic_inv_x, el cual tiene una lista con los ID de las funciones invocadas (puede tener ids repetidas). Y cuenta las repeticiones de los id (que serian la cantidad de veces que se la invoca). Genero una lista de tuplas asi: [(id funcion, nro repeticiones), (..., ...)].]
     """
     lista_agregar = []
@@ -107,7 +107,7 @@ def cargar_matriz(dic_invoc_count, matriz):
 
 
 def gen_ultima_fila(matriz):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe una matriz con solo numeros(int) y calcula la sumatoria de sus columnas, generando una lista con los resultados de cada columna.]
     """
     ultima_fila = []
@@ -119,7 +119,7 @@ def gen_ultima_fila(matriz):
     return ultima_fila
 
 def imprimir_todo(tamaño, dic_funcion_id, matriz, ultima_fila):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe el tamaño (cantidad de funciones), diccionario funcion_id, la matriz cargada con todos los datos, la ultima fila a agregar y el archivo de salida. Realiza el proceso de ejecucion para imprimir por pantalla lo solicitado en el enunciado.]
     """
     imprimir_cabecera(tamaño)
@@ -128,7 +128,7 @@ def imprimir_todo(tamaño, dic_funcion_id, matriz, ultima_fila):
     
     
 def imprimir_cabecera(largo):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe el largo, osea la cantidad de columnas que tiene que generar. Haciendo uso del format, imprime la cabecera de la tabla.]
     """
     print('{:^35}'.format("FUNCIONES"), end = "")
@@ -141,7 +141,7 @@ def imprimir_cabecera(largo):
     print("\n")
 
 def imprimir_lineas(dic_funcion_id, matriz):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe el diccionario funcion_id, el tamaño (cantidad de funciones) y la matriz cargada con todos los datos. Imprime por pantalla el cuerpo.]
     """
     x = 0
@@ -154,7 +154,7 @@ def imprimir_lineas(dic_funcion_id, matriz):
 
 
 def imprimir_ultima_fila(ultima_fila, tamaño):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe la ultima fila a imprimir y el tamaño (cantidad de funciones). Imprime por pantalla la ultima linea.]
     """
     print('{:<35}'.format("Total invocaciones"), end = "")
@@ -172,7 +172,7 @@ def crear_matriz(ancho, alto):
  
     
 def escribir_analizador(tamaño, dic_funcion_id, matriz, ultima_fila, salida):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe el tamaño (cantidad de funciones), diccionario funcion_id, la matriz cargada con todos los datos, la ultima fila a agregar y el archivo de salida. Realiza el proceso de ejecucion para generar analizador.txt.]
     """
     escribir_cabecera(salida, tamaño)
@@ -181,7 +181,7 @@ def escribir_analizador(tamaño, dic_funcion_id, matriz, ultima_fila, salida):
     print("\n\n*Genere el archivo analizador.txt el cual se encuentra ubicado en la carpeta 'salidas_modulos'.")
 
 def escribir_cabecera(salida, tamaño):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe la salida y el tamaño (cantidad de funciones). Escribe la cabecera en el analizador.txt.]
     """
     salida.write('{:^35}'.format("FUNCIONES"))
@@ -194,7 +194,7 @@ def escribir_cabecera(salida, tamaño):
     salida.write("\n")
     
 def escribir_cuerpo(salida, dic_funcion_id, tamaño, matriz):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe el diccionario funcion_id, el tamaño (cantidad de funciones) y la matriz cargada con todos los datos. Escribe en el analizador.txt el cuerpo.]
     """
     x = 0
@@ -206,7 +206,7 @@ def escribir_cuerpo(salida, dic_funcion_id, tamaño, matriz):
         salida.write("\n")
 
 def escribir_ultima_fila(salida, ultima_fila, tamaño):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe la ultima fila a escribir y el tamaño (cantidad de funciones). Escribe en el analizador.txt la ultima linea.]
     """
     salida.write('{:<35}'.format("Total invocaciones"))
@@ -214,7 +214,7 @@ def escribir_ultima_fila(salida, ultima_fila, tamaño):
             salida.write('{:^3}'.format(str(ultima_fila[i])))
 
 def main_analizador(fuente_unico, salida):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Fabiola Siles]
        [Ayuda: Realiza la linea de ejecucion a fin de cumplir con lo solicitado en el enunciado.]
     """
     lista_funciones = carga_lista_funciones(fuente_unico)
