@@ -78,7 +78,7 @@ def cerrar_archivos(lista):
 
 def main_modulo_merge(lista_funciones, lista_comentarios):
     """[Autor: Tomas Yu Nakasone]
-       [Ayuda: Recibe una lista con las rutas de los archivos a mergear. Una lista de funciones y una de comentarios. Genera "fuente_unico.csv" y "comentarios.csv"]
+       [Ayuda: Recibe una lista con las rutas de los archivos a mergear (lsita_comentarios --> paths de los archivos de comentarios y lista_funciones --> paths de archivos de funciones). Genera "fuente_unico.csv" y "comentarios.csv"]
     """
     # Hago lo mismo 2 veces
     # ------------- comentarios.csv

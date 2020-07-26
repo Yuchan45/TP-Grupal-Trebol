@@ -27,7 +27,7 @@ crear_lista_codigo.panel_general_funciones.py, 1, 6, 2, 1, 0, 0, 0, 0, 0, 2, SI,
 dueño.informacion_desarrollador.py, 1, 2, 1, 1, 0, 0, 0, 0, 0, 0, SI, '[Autor: Tomas Yu Nakasone]'
 enc_extra_descripcion.consulta_funciones.py, 1, 8, 1, 1, 1, 0, 0, 0, 0, 0, SI, '[Autor: Carlos Medina]'
 encontrar_autor.consulta_funciones.py, 1, 2, 4, 1, 0, 0, 0, 0, 0, 0, SI, '[Autor: Carlos Medina]'
-encontrar_descripcion.consulta_funciones.py, 1, 7, 4, 1, 1, 1, 0, 0, 0, 0, SI, '[[Autor: Carlos Medina]'
+encontrar_descripcion.consulta_funciones.py, 1, 7, 4, 1, 1, 1, 0, 0, 0, 0, SI, '[Autor: Carlos Medina]'
 encontrar_funcion.consulta_funciones.py, 1, 2, 4, 1, 0, 0, 0, 0, 0, 0, SI, '[Autor: Carlos Medina]'
 encontrar_llave_param.generador_csv.py, 1, 5, 1, 1, 0, 0, 0, 0, 0, 0, SI, '[Autor: Tomas Yu Nakasone]'
 encontrar_modulo.consulta_funciones.py, 1, 5, 4, 1, 1, 1, 0, 0, 0, 0, SI, '[Autor: Carlos Medina]'
