@@ -1,10 +1,10 @@
-from generador_csv import *
-from modulo_merge import *
-from panel_general_funciones import *
-from informacion_desarrollador import *
-from consulta_funciones import *
-from analizador_reutilizacion_codigo import *
-from arbol_invocacion import *
+from modulos.generador_csv import *
+from modulos.modulo_merge import *
+from modulos.panel_general_funciones import *
+from modulos.informacion_desarrollador import *
+from modulos.consulta_funciones import *
+from modulos.analizador_reutilizacion_codigo import *
+from modulos.arbol_invocacion import *
 
 def main_main():
     """[Autor: Tomas Yu Nakasone]
