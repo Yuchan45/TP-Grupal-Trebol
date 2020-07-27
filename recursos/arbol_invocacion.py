@@ -1,5 +1,5 @@
 def carga_dic_invocaciones(fuente_unico, lista_funciones):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y una lista con todas las funciones que hay. Devuelve un diccionario con clave: nombre de la funcion y de valor una lista con las funciones que invoca.]
     """
     dic_invocaciones = {}
@@ -15,7 +15,7 @@ def carga_dic_invocaciones(fuente_unico, lista_funciones):
     
     
 def carga_lista_funciones(fuente_unico):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con las funciones que hay en ella.]
     """
     lista_funciones = []
@@ -28,7 +28,7 @@ def carga_lista_funciones(fuente_unico):
 
 
 def lista_invocaciones(linea, lista_funciones):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea y una lista con las funciones q pueden aparecer, y te arma una lista con las funciones q aparecen en la linea. Devuelve dicha lista.]
     """
     lista_agregar = []
@@ -38,7 +38,7 @@ def lista_invocaciones(linea, lista_funciones):
     return lista_agregar
 
 def gen_lista_lineas(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve una lista con la seccion de las lineas de codigo como campos.]
     """
     linea = linea.rstrip("\n")
@@ -47,7 +47,7 @@ def gen_lista_lineas(linea):
     return lista_linea_codigo
 
 def contador_lineas(linea):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve la cantidad de lineas de codigo que hay en la funcion de esa linea.]
     """
     lista_sin_vacios = []  
@@ -60,7 +60,7 @@ def contador_lineas(linea):
 
 
 def load_dic_lineas_codigo(fuente_unico):
-    """[Autor: Yuchan]
+    """[Autor: Tomas Yu Nakasone]
        [Ayuda: Recibe una linea de un archivo de fuente_unico abierto y devuelve un diccionario con funcion como clave y cantidad de lineas como valor.]
     """
     dic_lineas_codigo = {}
@@ -74,8 +74,8 @@ def load_dic_lineas_codigo(fuente_unico):
     return dic_lineas_codigo
 
 def hacer_cadena_invocaciones(dic, funcion, cadena, nivel, dic_lineas_codigo, lista_cadena):
-    """[Autor: Yuchan]
-       [Ayuda: Recibe un dic con key funciones y de valor, una lista con las funciones a las que llama, una lista de las funciones q llama, recibe una funcion "BASE" y finalmente recibe "cadena" que es una lista a la que se agregaran las lineas a imprimir y un dic con la cantidad de lineas por funcion. (No la puedo poner adentro de la funcion xq como es recursiva, se va a borrar). Imprime un arbol de invocaciones.]
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe un dic con key funciones y de valor, una lista con las funciones a las que llama, una lista de las funciones q llama, recibe una funcion "BASE" y finalmente recibe "cadena" que es una lista a la que se agregaran las lineas a imprimir y un dic con la cantidad de lineas por funcion. Imprime un arbol de invocaciones.]
     """
     # El parametro lista_cadena es una lista que tiene listas que tienen las lineas a imprimir. La cree para luego ahcer que todas las listas anidadas tengan el mismo len, y asi poder crear un format con n parametros. Pero no me salio.
     nivel += 1
@@ -99,38 +99,32 @@ def hacer_cadena_invocaciones(dic, funcion, cadena, nivel, dic_lineas_codigo, li
         nivel = 0
         cadena.clear()
     
-def main_arbol_invocacion(dic, dic_lineas_codigo):
-    """[Autor: Yuchan]
-       [Ayuda: Recibe un dic funcion: lista de funciones invocadas y un diccionario funcion: cantidad lineas de codigo. Ejecuta una funcion recursiva la cual se encarga de imprimir por pantalla.]
+def imprimir_arbol_invocacion(dic, dic_lineas_codigo, main):
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe un dic = {funcion: lista de funciones invocadas} y un diccionario = {funcion: cantidad lineas de codigo}. Ejecuta una funcion recursiva la cual se encarga de imprimir por pantalla.]
     """
-    cadena = []
-    lista_cadena = []
+    cadena = [] 
+    lista_cadena = [] # No la puedo poner adentro de la funcion recursiva (ahcer_cadena_invocaciones) xq como es recursiva, se me va a borrar en cada iteracion que realice).
     for funcion in dic.keys():
-        if "main_main" in funcion:
+        if main in funcion:
             flag = True
-            print(funcion + "\n")
-            nivel = 0
+            #print(funcion + "\n")
+            nivel = 0 # Lo uso para saber el "nivel" o cantidad de veces que la funcion recursiva se llama a si misma.
             cadena.append(funcion)
             hacer_cadena_invocaciones(dic, funcion, cadena, nivel, dic_lineas_codigo, lista_cadena)
             #print(lista_cadena)
             print("\n---------------------")
-            
 
-fuente_unico = open("fuente_unico.csv", "r")
-lista_funciones = carga_lista_funciones(fuente_unico)
-fuente_unico.seek(0)
+def main_arbol_invocacion(fuente_unico, main):
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe un archivo, "fuente_unico", ya abierto y un string "main" el cual contiene el nombre de la funcion principal.]
+    """
+    lista_funciones = carga_lista_funciones(fuente_unico)
+    fuente_unico.seek(0)
 
-dic_lineas_codigo = load_dic_lineas_codigo(fuente_unico)
-fuente_unico.seek(0)
+    dic_lineas_codigo = load_dic_lineas_codigo(fuente_unico)
+    fuente_unico.seek(0)
 
-diccionario_invocaciones = carga_dic_invocaciones(fuente_unico, lista_funciones)
-main_arbol_invocacion(diccionario_invocaciones, dic_lineas_codigo)
-print(diccionario_invocaciones)
-    
-fuente_unico.close()
-
-
-
-
-
+    diccionario_invocaciones = carga_dic_invocaciones(fuente_unico, lista_funciones)
+    imprimir_arbol_invocacion(diccionario_invocaciones, dic_lineas_codigo, main)
 
