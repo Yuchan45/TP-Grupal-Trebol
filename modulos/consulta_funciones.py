@@ -1,5 +1,5 @@
 def lista_de_funciones(fuente_unico):
-    """[Autor: Carlos Medina]
+    """[Autor: Miguel Lora]
        [Ayuda: Recibe una linea de fuente_unico.csv por parametro y devuelve una lista que contiene los nombres de las funciones]
     """
     lista_funciones = []
@@ -123,7 +123,7 @@ def caso_pregunta(fuente_unico, comentarios, funcion):
 
 
 def caso_hashtag(fuente_unico, comentarios, funcion):
-    """[Autor: Carlos Medina]
+    """[Autor: Miguel Lora]
        [Ayuda: Recibe fuente_unico, comentarios y la funcion buscada por parametro. Imprime los datos solicitados por el enunciado.]
     """
     
@@ -238,7 +238,7 @@ def mostrar_cuadro(lista_funciones):
     print("\n")
         
 def escribir_arch_salida(salida, funcion, parametros, autor, descripcion, modulo):
-    """[Autor: Carlos Medina]
+    """[Autor: Fabiola Siles]
        [Ayuda: Recibe por parametros los datos a escribir en el archivo de salida. Devuelve un txt ubicado en salidas_modulos con todos los datos.]
     """
     max = 80
