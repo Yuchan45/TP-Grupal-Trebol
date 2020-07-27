@@ -2,23 +2,24 @@ Informe de Desarrollo Por Autor
 [Autor: Tomas Yu Nakasone]
            FUNCION              Líneas  
 ----------------------------- ----------
-             main                 48    
-        main_generador            29    
+          main_main               57    
     generar_dict_funciones        28    
    generar_dict_comentarios       27    
       count_invocaciones          21    
  escribir_info_desarrollador      16    
+        main_generador            16    
  main_panel_general_funciones     16    
+  hacer_cadena_invocaciones       15    
  imprimir_info_desarrollador      15    
    carga_dic_participacion        14    
-      main_modulo_merge           12    
      gen_dic_invoc_count          11    
-            merge                 10    
          buscar_autor             8     
          buscar_ayuda             8     
         cargar_matriz             8     
+     crear_funciones_csv          8     
       count_comentarios           7     
         count_palabra             7     
+    crear_comentarios_csv         7     
       calc_total_lineas           6     
       cont_lineas_codigo          6     
           count_ifs               6     
@@ -48,12 +49,31 @@ main_informacion_desarrollador    5
         menor_funcion             2     
          ordenar_dict             2     
 
-    45 Funciones - Lineas        398       58%    
+    46 Funciones - Lineas        402       52%    
+----------------------------- ----------
+
+[Autor: Miguel Lora]
+           FUNCION              Líneas  
+----------------------------- ----------
+         caso_hashtag             24    
+    carga_dic_invocaciones        10    
+            merge                 10    
+  imprimir_arbol_invocacion       9     
+    load_dic_lineas_codigo        9     
+    carga_lista_funciones         7     
+      lista_de_funciones          7     
+       contador_lineas            6     
+       gen_lista_lineas           6     
+    main_arbol_invocacion         6     
+      lista_invocaciones          5     
+
+    11 Funciones - Lineas         99       13%    
 ----------------------------- ----------
 
 [Autor: Fabiola Siles]
            FUNCION              Líneas  
 ----------------------------- ----------
+     escribir_arch_salida         22    
         gen_dic_inv_x             11    
        main_analizador            10    
     carga_lista_funciones         8     
@@ -70,30 +90,28 @@ main_informacion_desarrollador    5
         imprimir_todo             3     
      imprimir_ultima_fila         3     
 
-    15 Funciones - Lineas         92       13%    
+    16 Funciones - Lineas        114       15%    
 ----------------------------- ----------
 
 [Autor: Carlos Medina]
            FUNCION              Líneas  
 ----------------------------- ----------
    main_consulta_funciones        27    
-         caso_hashtag             24    
       caso_hashtag_todo           22    
-     escribir_arch_salida         22    
         caso_pregunta             16    
       caso_imprimir_todo          14    
       caso_pregunta_todo          14    
+      main_modulo_merge           12    
     lista_lineas_de_codigo        10    
       conseguir_funcion           9     
     enc_extra_descripcion         8     
         mostrar_cuadro            8     
     encontrar_descripcion         7     
-      lista_de_funciones          7     
        encontrar_modulo           5     
        encontrar_param            3     
        encontrar_autor            2     
       encontrar_funcion           2     
 
-    17 Funciones - Lineas        200       29%    
+    15 Funciones - Lineas        159       21%    
 ----------------------------- ----------
 

@@ -157,44 +157,59 @@ def escribir_registros(archivo, diccionario):
         registros = str(diccionario[key]).rstrip("]").lstrip("[")
         linea = key + "," + registros + "\n"
         archivo.write(linea)
-   
+  
+def crear_funciones_csv(linea, codigo, l_fun):
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe una linea, codigo que es un archivo abierto y una lista a la que se le van agregando paths de los modulos con funciones (que luego se usara para el merge). Realiza la linea de ejecucion a fin de crear los funciones.csv]
+    """
+    dict_funciones = generar_dict_funciones(codigo)
+    dict_funciones_ordenado = ordenar_dict(dict_funciones)
+    ruta_csv_funciones = "./salidas/csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+    
+    guardar = open(ruta_csv_funciones, "w")
+    escribir_registros(guardar, dict_funciones_ordenado)
+    guardar.close()  
+    l_fun.append(ruta_csv_funciones) # Esta es la lista que se devuelve luego. Tiene todas las funciones.
 
+    codigo.seek(0)
+        
+def crear_comentarios_csv(linea, codigo, l_com):
+    """[Autor: Tomas Yu Nakasone]
+       [Ayuda: Recibe una linea, codigo que es un archivo abierto y una lista a la que se le van agregando paths de los modulos con comentarios (que luego se usara para el merge). Realiza la linea de ejecucion a fin de crear los comentarios.csv]
+    """
+    dict_comentarios = generar_dict_comentarios(codigo)
+    dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
+    ruta_csv_comentarios = "./salidas/csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
+    guardar = open(ruta_csv_comentarios, "w")
+    escribir_registros(guardar, dict_comentarios_ordenado)
+    guardar.close()
+    l_com.append(ruta_csv_comentarios) # Esta es la lista que se devuelve luego. Tiene una lista con los comentarios.
+        
 def main_generador(archivo):
     """[Autor: Tomas Yu Nakasone]
-       [Ayuda: Recibe el txt con las path de los archivos a analizar y devuelve un csv comentario y un csv funciones por cada archivo.]
+       [Ayuda: Recibe el txt con las path de los archivos a analizar y genera un csv comentario y un csv funciones por cada archivo. Devuelve una lista con las funciones y una lista con comentarios]
     """
     l_fun = []
     l_com = []
     programas = open(archivo, "r")
-    l_fun.clear()
+    l_fun.clear() # Hago esto porque es probable que esto se haga varias veces, asi que hay q limpiar la lista para que no se repitan datos.
     l_com.clear()
     linea = leer_linea(programas)
     while linea:
         ruta = linea.rstrip("\n")
         codigo = open(ruta, "r")
-        dict_funciones = generar_dict_funciones(codigo)
-        dict_funciones_ordenado = ordenar_dict(dict_funciones)
-        ruta_csv_funciones = "./salidas/csv_funciones_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
-        guardar = open(ruta_csv_funciones, "w")
-        escribir_registros(guardar, dict_funciones_ordenado)
-        guardar.close()
-        l_fun.append(ruta_csv_funciones)
-
-        codigo.seek(0)
         
-        dict_comentarios = generar_dict_comentarios(codigo)
-        dict_comentarios_ordenado = ordenar_dict(dict_comentarios)
-        ruta_csv_comentarios = "./salidas/csv_comentarios_" + os.path.basename(codigo.name).rstrip(".py") + ".csv"
-        guardar = open(ruta_csv_comentarios, "w")
-        escribir_registros(guardar, dict_comentarios_ordenado)
-        guardar.close()
-        l_com.append(ruta_csv_comentarios)
+        crear_funciones_csv(linea, codigo, l_fun)
+
+        crear_comentarios_csv(linea, codigo, l_com)
+
         codigo.close()
-        dict_funciones.clear()
+        
+        dict_funciones.clear() # Hago esto porque es probable que esto se haga varias veces, asi que hay q limpiar la lista para que no se repitan datos.
         dict_comentarios.clear()
 
         linea = leer_linea(programas)
-    return l_fun, l_com
+    return l_fun, l_com # Estas se usaran luego en el modulo_merge para abrir los archivos correspondientes a mergear.
         
 
 

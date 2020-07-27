@@ -40,7 +40,7 @@ def menor_funcion(lineas):
     return dato_menor[0]
 
 def merge(arch_salida, *archs_entrada):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Miguel Lora]
        [Ayuda: Recibe un archivo de salida "arch_salida" abierto en modo sobreescritura en donde se guardara el merge y "archs_entrada" la cual es una lista de archivos csv ya abiertos en modo lectura.]
     """
     lineas = leer_lineas(archs_entrada)
@@ -77,7 +77,7 @@ def cerrar_archivos(lista):
         lista[i].close()
 
 def main_modulo_merge(lista_funciones, lista_comentarios):
-    """[Autor: Tomas Yu Nakasone]
+    """[Autor: Carlos Medina]
        [Ayuda: Recibe una lista con las rutas de los archivos a mergear (lsita_comentarios --> paths de los archivos de comentarios y lista_funciones --> paths de archivos de funciones). Genera "fuente_unico.csv" y "comentarios.csv"]
     """
     # Hago lo mismo 2 veces
