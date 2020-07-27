@@ -5,7 +5,7 @@ from informacion_desarrollador import *
 from consulta_funciones import *
 from analizador_reutilizacion_codigo import *
 
-def main():
+def main_main():
     """[Autor: Tomas Yu Nakasone]
        [Ayuda: Genera fuente_unico y comentarios.csv. Y segun la opcion que tomes realizara la linea de ejecucion que corresponda.]
     """
@@ -66,4 +66,4 @@ def main():
         comentarios.close()
         arch_salida.close()
 
-main()
+main_main()

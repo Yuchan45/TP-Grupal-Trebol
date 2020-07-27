@@ -2,12 +2,12 @@ Informe de Desarrollo Por Autor
 [Autor: Tomas Yu Nakasone]
            FUNCION              Líneas  
 ----------------------------- ----------
-             main                 48    
-        main_generador            29    
+          main_main               50    
     generar_dict_funciones        28    
    generar_dict_comentarios       27    
       count_invocaciones          21    
  escribir_info_desarrollador      16    
+        main_generador            16    
  main_panel_general_funciones     16    
  imprimir_info_desarrollador      15    
    carga_dic_participacion        14    
@@ -17,8 +17,10 @@ Informe de Desarrollo Por Autor
          buscar_autor             8     
          buscar_ayuda             8     
         cargar_matriz             8     
+     crear_funciones_csv          8     
       count_comentarios           7     
         count_palabra             7     
+    crear_comentarios_csv         7     
       calc_total_lineas           6     
       cont_lineas_codigo          6     
           count_ifs               6     
@@ -48,7 +50,7 @@ main_informacion_desarrollador    5
         menor_funcion             2     
          ordenar_dict             2     
 
-    45 Funciones - Lineas        398       58%    
+    47 Funciones - Lineas        402       58%    
 ----------------------------- ----------
 
 [Autor: Fabiola Siles]
