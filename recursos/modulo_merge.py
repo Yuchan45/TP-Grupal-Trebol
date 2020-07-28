@@ -48,7 +48,7 @@ def merge(arch_salida, *archs_entrada):
     
     while menor < MAX_NOM_FUNCION:
         for i in range(len(lineas)):
-            # En nom_funcion guarda el primer campo y en "*extras" (variable dinamica) se guarda el resto de los campos.
+            # Se lee la linea y en "nom_funcion" guarda el primer campo, osea la funcion, y en "*extras" (variable dinamica) se guarda el resto de los campos.
             nom_funcion, *extras = lineas[i]
             #Guarda los datos de la línea mientras el nom_funcion no cambie
             while nom_funcion == menor:
@@ -82,7 +82,7 @@ def main_modulo_merge(lista_funciones, lista_comentarios):
     """
     # Hago lo mismo 2 veces
     # ------------- comentarios.csv
-    rutas_arch_abiertos = abrir_archivos(lista_comentarios) # Abro los archivos de la lista comentarios y obtegno una lista con los paths de los archivos a mergear
+    rutas_arch_abiertos = abrir_archivos(lista_comentarios) # ABRO los archivos de la lista comentarios y obtegno una lista con los PATHS (oesa, lo que te devuelve la funcion open() de python) de los archivos a mergear
     salida = "comentarios.csv"
     arch_salida = open(salida, "w")
     

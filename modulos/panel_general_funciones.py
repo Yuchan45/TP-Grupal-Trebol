@@ -109,7 +109,7 @@ def escribir_panel_general(arch_salida, funcion, parametros, lineas, invocacione
     
 def count_invocaciones(fuente_unico):
     """[Autor: Tomas Yu Nakasone]
-       [Ayuda: Recibe una linea de un archivo de fuente_unico.csv abierto y devuelve un diccionario que tiene registrado la cantidad de invocaciones de cada funcion.]
+       [Ayuda: Recibe una linea de un archivo de fuente_unico.csv abierto y devuelve un diccionario que tiene registrado la cantidad de invocaciones de cada funcion. {funcion: count_invocaciones}]
     """
     l_funciones = []
     dic_contador = {}

@@ -80,7 +80,7 @@ def hacer_cadena_invocaciones(dic, funcion, cadena, nivel, dic_lineas_codigo, li
     # El parametro lista_cadena es una lista que tiene listas que tienen las lineas a imprimir. La cree para luego ahcer que todas las listas anidadas tengan el mismo len, y asi poder crear un format con n parametros. Pero no me salio.
     nivel += 1
     # Uso las variables "nivel" para saber en que ciclo de la funcion estoy. Esto lo uso luego para saber con cuantos espacios en blanco rellenar al principio del array con las cadenas a imprimir y que quede ordenado.
-    if len(dic[funcion]) != 0 and dic[funcion] != funcion:
+    if len(dic[funcion]) != 0 and nivel < 5: # En un principio quise hacer que si la funcion actual es igual a la anterior llamada, entonces que salga del if xq es recursiva. Pero no entraba bien en la condicion y me rendi. Y puse que si entraba mas de 5 veces, salga.
         for i in dic[funcion]:
             # lineas es = "(x cant lineas)"
             lineas = " (" + str(dic_lineas_codigo[i]) + ") "

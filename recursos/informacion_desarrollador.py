@@ -131,6 +131,5 @@ def main_informacion_desarrollador(fuente_unico, comentarios, salida):
     imprimir_info_desarrollador(total_lineas, dic_participacion)
     escribir_info_desarrollador(salida, total_lineas, dic_participacion)
     print("*Genere el participacion.txt, ubicado en la carpeta de salidas_modulos")
-
       
         
