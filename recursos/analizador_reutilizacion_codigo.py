@@ -108,7 +108,7 @@ def cargar_matriz(dic_invoc_count, matriz):
 
 def gen_ultima_fila(matriz):
     """[Autor: Fabiola Siles]
-       [Ayuda: Recibe una matriz con solo numeros(int) y calcula la sumatoria de sus columnas, generando una lista con los resultados de cada columna.]
+       [Ayuda: Recibe una matriz cargada y calcula la sumatoria de sus columnas (solo los numeros), generando una lista con los resultados de cada columna.]
     """
     ultima_fila = []
     columnas = len(matriz)

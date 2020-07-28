@@ -38,17 +38,17 @@ def generar_dict_funciones(codigo):
             key, parametros = encontrar_llave_param(linea)
             dict_funciones[key] = [parametros, os.path.basename(codigo.name)]
             linea = leer_linea(codigo)
-            while re.match(r'\s', linea):
+            while re.match(r'\s', linea): # Mientras no ecuentre otro "def" osea otra funcion.
                 # Esto lo intente meter en una funcion pero el problema era que cuando hacia el skip en la funcion, no se mantenia el index de la linea en el bloque principal.
-                if comentario_multiple in linea: 
+                if comentario_multiple in linea: # Saltea si son comentarios. Aca solo me importa el codigo.
                     linea = leer_linea(codigo)
                     while not comentario_multiple in linea:
                         linea = leer_linea(codigo)
                     linea = leer_linea(codigo)
-                elif comentario_simple in linea:
+                elif comentario_simple in linea: 
                     linea = linea.lstrip(" ")
                     l_split = linea.split("#")
-                    if l_split[0] != "''":
+                    if l_split[0] != "''": # Esto es para fiajrme si el comentario es al lado de codigo o esta en toda la linea.
                         dict_funciones[key].append(l_split[0])
                         linea = leer_linea(codigo)
                     else:
@@ -57,7 +57,7 @@ def generar_dict_funciones(codigo):
                     dict_funciones[key].append(linea.strip(" ").rstrip("\n"))
                     linea = leer_linea(codigo)
         else:
-            # Si es una linea que no pertenece a un funcion, pasa a la sig linea. (la guarda en el dict_extra del cual se generara extra.csv)
+            # Si es una linea que no pertenece a una funcion, pasa a la sig linea. Por ejemplo imports.
             linea = leer_linea(codigo)           
     return dict_funciones
 
@@ -169,7 +169,7 @@ def crear_funciones_csv(linea, codigo, l_fun):
     guardar = open(ruta_csv_funciones, "w")
     escribir_registros(guardar, dict_funciones_ordenado)
     guardar.close()  
-    l_fun.append(ruta_csv_funciones) # Esta es la lista que se devuelve luego. Tiene todas las funciones.
+    l_fun.append(ruta_csv_funciones) # Esta es la lista que se devuelve luego. Tiene los paths de todas los "csv_funciones_funcion".
 
     codigo.seek(0)
         
@@ -183,7 +183,7 @@ def crear_comentarios_csv(linea, codigo, l_com):
     guardar = open(ruta_csv_comentarios, "w")
     escribir_registros(guardar, dict_comentarios_ordenado)
     guardar.close()
-    l_com.append(ruta_csv_comentarios) # Esta es la lista que se devuelve luego. Tiene una lista con los comentarios.
+    l_com.append(ruta_csv_comentarios) # Esta es la lista que se devuelve luego. Tiene los paths de todas los "csv_comentarios_funcion".
         
 def main_generador(archivo):
     """[Autor: Tomas Yu Nakasone]
@@ -209,7 +209,7 @@ def main_generador(archivo):
         dict_comentarios.clear()
 
         linea = leer_linea(programas)
-    return l_fun, l_com # Estas se usaran luego en el modulo_merge para abrir los archivos correspondientes a mergear.
+    return l_fun, l_com # Estas lista con los paths de los archivos a mergear, luego se usaran en el modulo_merge para abrir los archivos correspondientes a mergear.
         
 
 

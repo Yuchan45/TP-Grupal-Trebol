@@ -322,7 +322,8 @@ Funcion utilizada en el modulo:  'panel_general_funciones.py'
 ---------------
 Autor: Tomas Yu Nakasone
 Ayuda: Recibe una linea de un archivo de fuente_unico.csv abierto y devuelve un 
-diccionario que tiene registrado la cantidad de invocaciones de cada funcion.
+diccionario que tiene registrado la cantidad de invocaciones de cada funcion. {f
+uncion: count_invocaciones}
 Funcion utilizada en el modulo:  'panel_general_funciones.py'
 
 -----------------------------------------------
@@ -700,8 +701,8 @@ Funcion utilizada en el modulo:  'arbol_invocacion.py'
 |INFORMACION|:
 ---------------
 Autor: Fabiola Siles
-Ayuda: Recibe una matriz con solo numeros(int) y calcula la sumatoria de sus col
-umnas, generando una lista con los resultados de cada columna.
+Ayuda: Recibe una matriz cargada y calcula la sumatoria de sus columnas (solo lo
+s numeros), generando una lista con los resultados de cada columna.
 Funcion utilizada en el modulo:  'analizador_reutilizacion_codigo.py'
 
 -----------------------------------------------
@@ -1002,4 +1003,3 @@ _funciones)
 Autor: Carlos Medina
 Ayuda: Recibe por parametros fuente_unico, camentarios, el archivo de salida, to
 dos previamente abiertos y una lista con las funciones que hay. Pregunta que es 
-lo que es usuario desea realizar y dependiendo de lo que eliga, ejecuta la funci
